@@ -74,9 +74,9 @@
             @Html.DisplayFor(modelItem => item.IsStaff)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PersonID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PersonID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PersonID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.PersonID }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Details", "Details", new { id=item.PersonID }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.PersonID }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

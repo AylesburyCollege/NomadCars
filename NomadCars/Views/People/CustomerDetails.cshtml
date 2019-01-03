@@ -15,7 +15,7 @@
             </div>
             <div class="panel-body">
                 <dl class="dl-horizontal">
-                    <dt>
+                    @*@*<dt>
                         @Html.DisplayNameFor(model => model.Address.House)
                     </dt>
 
@@ -29,7 +29,7 @@
 
                     <dd>
                         @Html.DisplayFor(model => model.Staff.Department)
-                    </dd>
+                    </dd>*@
 
                     <dt>
                         @Html.DisplayNameFor(model => model.FirstName)
@@ -105,7 +105,7 @@
 
                 </dl>
                 <p class="text-right">
-                    @Html.ActionLink("Edit Your Details", "Edit", new { id = Model.PersonID }, new { @class="btn btn-success"})
+                    @Html.ActionLink("Edit Personal Details", "Edit", new { id = Model.PersonID }, new { @class="btn btn-success"})
                 </p>
             </div>
         </div>
@@ -159,6 +159,9 @@
                     </dd>
 
                 </dl>
+                <p class="text-right">
+                    @Html.ActionLink("Edit Address Details", "Edit", new { id = Model.PersonID }, new { @class = "btn btn-success" })
+                </p>
             </div>
         </div>
     </section>
@@ -167,7 +170,7 @@
     <section class="col-lg-6">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title">Personal Details</h3>
+                <h3 class="panel-title">Payment Card Details</h3>
             </div>
             <div class="panel-body">
  @*Payment Card details*@
@@ -185,8 +188,55 @@
                     <h3 class="panel-title">Staff Details</h3>
                 </div>
                 <div class="panel-body">
-                    @*// staff details*@
-                    <img src="~/Images/Staff/@Model.Staff.ImageURL" alt="Photo of staff"/>
+                    <dl class="dl-horizontal">
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Staff.Department)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Staff.Department)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Staff.JobPosition)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Staff.JobPosition)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Staff.StartDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Staff.StartDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Staff.Salary)    
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Staff.Salary)
+                        </dd>
+
+                        <dd>
+                            <img src="~/Images/Staff/@Model.Staff.ImageURL" alt="Photo of staff" />
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Staff.Description)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Staff.Description)
+                        </dd>
+                    </dl>
+                   <p class="text-right">
+                       @Html.ActionLink("Edit Staff Details", "Edit", new {id = Model.PersonID }, new { @class = "btn btn-success" })
+                   </p>
                     
                     
                 </div>

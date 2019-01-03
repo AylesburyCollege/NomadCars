@@ -58,9 +58,9 @@
             @Html.DisplayFor(modelItem => item.County)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AddressID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AddressID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AddressID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.AddressID }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Details", "Details", new { id=item.AddressID }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.AddressID }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
