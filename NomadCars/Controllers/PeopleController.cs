@@ -20,6 +20,7 @@ namespace NomadCars.Controllers
         }
 
         // GET: People/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -34,6 +35,23 @@ namespace NomadCars.Controllers
             return View(person);
         }
 
+        // GET: People/Details/5
+        [Authorize]
+        public ActionResult CustomerDetails()
+        {
+
+            string email = User.Identity.Name;
+            Person customer = db.People.Where(p => p.Email == email).FirstOrDefault();
+
+
+            if (customer == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+
+            return View(customer);
+        }
         // GET: People/Create
         public ActionResult Create()
         {
