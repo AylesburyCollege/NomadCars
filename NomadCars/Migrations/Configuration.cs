@@ -271,7 +271,7 @@ namespace NomadCars.Migrations
                     TransactionType = TransactionTypes.Card,
                     CarID = 3,
                     PersonID = 5,
-                    StaffID = "N/A"
+                    StaffID = 2
                 },
 
                 new Purchase
@@ -286,7 +286,7 @@ namespace NomadCars.Migrations
                     TransactionType = TransactionTypes.Cash,
                     CarID = 1,
                     PersonID = 6,
-                    StaffID = "N/A"
+                    StaffID = 4
                 },
 
                 new Purchase
@@ -301,7 +301,7 @@ namespace NomadCars.Migrations
                     TransactionType = TransactionTypes.Card,
                     CarID = 1,
                     PersonID = 7,
-                    StaffID = "N/A"
+                    StaffID = 4
                 },
 
                 new Purchase
@@ -316,7 +316,7 @@ namespace NomadCars.Migrations
                     TransactionType = TransactionTypes.Cash,
                     CarID = 4,
                     PersonID = 8,
-                    StaffID = "N/A"
+                    StaffID = 3
                 },
 
                 new Purchase
@@ -331,7 +331,7 @@ namespace NomadCars.Migrations
                     TransactionType = TransactionTypes.HP,
                     CarID = 2,
                     PersonID = 9,
-                    StaffID = "N/A"
+                    StaffID = 4
                 },
 
                 new Purchase
@@ -346,7 +346,7 @@ namespace NomadCars.Migrations
                     TransactionType = TransactionTypes.Loan,
                     CarID = 5,
                     PersonID = 10,
-                    StaffID = "N/A"
+                    StaffID = 2
                 }
 
             };
@@ -387,8 +387,8 @@ namespace NomadCars.Migrations
                     NameOnCard = "Daniel Schafer-Smith",
                     CardNumber = " ",
                     CardType = CardTypes.PAYPAL,
-                    ExpiryMonth = "",
-                    ExpiryYear = "",
+                    ExpiryMonth = 2,
+                    ExpiryYear = 2020,
                     SecurityNumber = ""
                 },
 
@@ -398,8 +398,8 @@ namespace NomadCars.Migrations
                     NameOnCard = "Zeeshan Akhlaq",
                     CardNumber = "5011 6100 1897 1842",
                     CardType = CardTypes.MASTERCARD,
-                    ExpiryMonth = "08",
-                    ExpiryYear = "2020",
+                    ExpiryMonth = 8,
+                    ExpiryYear = 2020,
                     SecurityNumber = "871"
                 },
 
@@ -409,8 +409,8 @@ namespace NomadCars.Migrations
                     NameOnCard = "Tomas Green",
                     CardNumber = "1963 4532 1829 4110",
                     CardType = CardTypes.VISA_CREDIT,
-                    ExpiryMonth = "01",
-                    ExpiryYear = "2022",
+                    ExpiryMonth = 1,
+                    ExpiryYear = 2022,
                     SecurityNumber = "661"
                 },
 
@@ -420,9 +420,9 @@ namespace NomadCars.Migrations
                     NameOnCard = "Ben Miller",
                     CardNumber = " ",
                     CardType = CardTypes.PAYPAL,
-                    ExpiryMonth = "",
-                    ExpiryYear = "",
-                    SecurityNumber = ""
+                    ExpiryMonth = 5,
+                    ExpiryYear = 2020,
+                    SecurityNumber = "432"
                 },
 
                 new PaymentCard
@@ -431,8 +431,8 @@ namespace NomadCars.Migrations
                     NameOnCard = "Lilly Erikson",
                     CardNumber = " 5001 7152 9234 0166",
                     CardType = CardTypes.MASTERCARD,
-                    ExpiryMonth = "11",
-                    ExpiryYear = "2028",
+                    ExpiryMonth = 11,
+                    ExpiryYear = 2021,
                     SecurityNumber = "313"
                 },
 
@@ -442,9 +442,9 @@ namespace NomadCars.Migrations
                     NameOnCard = "Joshua Knight",
                     CardNumber = " ",
                     CardType = CardTypes.PAYPAL,
-                    ExpiryMonth = "",
-                    ExpiryYear = "",
-                    SecurityNumber = ""
+                    ExpiryMonth = 9,
+                    ExpiryYear = 2020,
+                    SecurityNumber = "983"
                 },
 
                 new PaymentCard
@@ -453,8 +453,8 @@ namespace NomadCars.Migrations
                     NameOnCard = "Emily White",
                     CardNumber = "2168 6188 6253 1323",
                     CardType = CardTypes.VISA_CREDIT,
-                    ExpiryMonth = "04",
-                    ExpiryYear = "2026",
+                    ExpiryMonth = 4,
+                    ExpiryYear = 2022,
                     SecurityNumber = "701"
                 },
 
@@ -464,8 +464,8 @@ namespace NomadCars.Migrations
                     NameOnCard = "Eliot Myers",
                     CardNumber = "7511 8012 1022 4834",
                     CardType = CardTypes.MASTERCARD,
-                    ExpiryMonth = "01",
-                    ExpiryYear = "2022",
+                    ExpiryMonth = 1,
+                    ExpiryYear = 2022,
                     SecurityNumber = "121"
                 }
 
