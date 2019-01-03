@@ -3,8 +3,12 @@
 @{
     ViewBag.Title = "Staff";
 }
+<header class="jumbotron">
+    
+    <h1>Nomad Cars : Staff Portal</h1>
+    <h2>Our Staff Team</h2>
 
-<h2>Our Staff Team</h2>
+</header>
 
 <p>
     @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary btn-large" })
@@ -59,9 +63,9 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StaffID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.StaffID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.StaffID })
+            @Html.ActionLink("Edit", "Edit", new {@class = "btn btn-success", id=item.StaffID }) |
+            @Html.ActionLink("Details", "Details", new {@class = "btn btn-info", id=item.StaffID }) |
+            @Html.ActionLink("Delete", "Delete", new { @class = "btn btn-danger" }, new {id=item.StaffID })
         </td>
     </tr>
 }
