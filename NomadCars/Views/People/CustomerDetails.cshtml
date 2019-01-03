@@ -3,104 +3,200 @@
 @{
     ViewBag.Title = "Details";
 }
+<header class="jumbotron">
+    <h2>Details</h2>
 
-<h2>Details</h2>
+</header>
+<section class="row">
+    <section class="col-lg-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Personal Details</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address.House)
+                    </dt>
 
-<div>
-    <h4>Person</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Address.House)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Address.House)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Address.House)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Staff.Department)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Staff.Department)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Staff.Department)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Staff.Department)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.HomePhoneNumber)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HomePhoneNumber)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.HomePhoneNumber)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.HomePhoneNumber)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MobilePhoneNumber)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MobilePhoneNumber)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MobilePhoneNumber)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MobilePhoneNumber)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DateOfBirth)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.DateOfBirth)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DateOfBirth)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MaritalStatus)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MaritalStatus)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MaritalStatus)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MaritalStatus)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.IsCustomer)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IsCustomer)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.IsCustomer)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.IsCustomer)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.IsStaff)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IsStaff)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.IsStaff)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.IsStaff)
-        </dd>
+                </dl>
+                <p class="text-right">
+                    @Html.ActionLink("Edit Your Details", "Edit", new { id = Model.PersonID }, new { @class="btn btn-success"})
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Address Details</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PersonID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address.House)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Address.House)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address.StreetName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Address.StreetName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address.TownName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Address.TownName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address.Postcode)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Address.Postcode)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address.County)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Address.County)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+    </section>
+</section>
+<section class="row">
+    <section class="col-lg-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Personal Details</h3>
+            </div>
+            <div class="panel-body">
+ @*Payment Card details*@
+                <p class="text-right">
+                    @Html.ActionLink("Edit Your Details", "Edit", new { id = Model.PersonID }, new { @class = "btn btn-success" })
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="col-lg-6">
+        @if (Model.IsStaff)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Staff Details</h3>
+                </div>
+                <div class="panel-body">
+                    @*// staff details*@
+                    <img src="~/Images/Staff/@Model.Staff.ImageURL" alt="Photo of staff"/>
+                    
+                    
+                </div>
+            </div>
+        }
+        else
+        {
+            //a button to proceed to car payment
+        }
+     </section>
+</section>
+
+

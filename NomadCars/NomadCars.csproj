@@ -284,6 +284,7 @@
     <Content Include="Images\BMW420D.jpg" />
     <Content Include="Images\BMWI8.jpg" />
     <Content Include="Images\BMWX1.jpg" />
+    <Content Include="Images\Staff\WFavatar.JPG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -366,6 +367,7 @@
     <Content Include="Views\Cars\Index.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\People\CustomerDetails.cshtml" />
+    <Content Include="Views\People\_Form.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

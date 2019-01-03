@@ -11,6 +11,7 @@ namespace NomadCars.Controllers
     public class PeopleController : Controller
     {
         private NomadDbContext db = new NomadDbContext();
+        private Person customer;
 
         // GET: People
         public ActionResult Index()
@@ -41,12 +42,13 @@ namespace NomadCars.Controllers
         {
 
             string email = User.Identity.Name;
-            Person customer = db.People.Where(p => p.Email == email).FirstOrDefault();
+            customer = db.People.Where(p => p.Email == email).Include(s => s.Staff).FirstOrDefault();
 
 
             if (customer == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+                return RedirectToAction("Create");
             }
 
 
@@ -55,9 +57,18 @@ namespace NomadCars.Controllers
         // GET: People/Create
         public ActionResult Create()
         {
-            ViewBag.PersonID = new SelectList(db.Addresses, "AddressID", "House");
-            ViewBag.PersonID = new SelectList(db.Staff, "StaffID", "Department");
-            return View();
+            //ViewBag.PersonID = new SelectList(db.Addresses, "AddressID", "House");
+            //ViewBag.PersonID = new SelectList(db.Staff, "StaffID", "Department");
+
+            string email = User.Identity.Name;
+
+            customer = new Person();
+            customer.DateOfBirth = new System.DateTime(1990, 1, 1);
+            customer.Email = email;
+            customer.IsStaff = false;
+            customer.IsCustomer = true;
+
+            return View(customer);
         }
 
         // POST: People/Create
@@ -71,7 +82,8 @@ namespace NomadCars.Controllers
             {
                 db.People.Add(person);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                return RedirectToAction("CustomerDetails");
             }
 
             ViewBag.PersonID = new SelectList(db.Addresses, "AddressID", "House", person.PersonID);
@@ -109,7 +121,7 @@ namespace NomadCars.Controllers
             {
                 db.Entry(person).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("CustomerDetails");
             }
 
             ViewBag.PersonID = new SelectList(db.Addresses, "AddressID", "House", person.PersonID);
