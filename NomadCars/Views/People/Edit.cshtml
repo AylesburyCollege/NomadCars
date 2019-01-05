@@ -3,6 +3,11 @@
 @{
     ViewBag.Title = "Edit";
 }
+<header class="jumbotron">
+    <h1>Nomad Cars</h1>
+    <h2>Editing Personal Details for @Model.FullName</h2>
+</header>
+
 <link href="~/Content/Site.css" rel="stylesheet" />
 <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
@@ -14,7 +19,7 @@
     });
 </script>
 
-<h2>Edit</h2>
+
 
 
 @using (Html.BeginForm())

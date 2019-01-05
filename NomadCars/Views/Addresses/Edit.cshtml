@@ -3,9 +3,10 @@
 @{
     ViewBag.Title = "Edit";
 }
-
-<h2>Edit</h2>
-
+<header class="jumbotron">
+    <h1>Nomad Cars</h1>
+    <h2>Editing Address Details for @Model.Person.FullName</h2>
+</header>
 
 @using (Html.BeginForm())
 {
