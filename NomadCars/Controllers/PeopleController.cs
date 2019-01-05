@@ -8,12 +8,13 @@ using NomadCars.Models;
 
 namespace NomadCars.Controllers
 {
+    [Authorize]
     public class PeopleController : Controller
     {
         private NomadDbContext db = new NomadDbContext();
         private Person customer;
 
-        // GET: People
+        // GET: People        
         public ActionResult Index()
         {
             var people = db.People.Include(p => p.Address).Include(p => p.Staff);
@@ -21,7 +22,7 @@ namespace NomadCars.Controllers
         }
 
         // GET: People/Details/5
-        [Authorize]
+        [Authorize(Roles = "Staff")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,7 +38,7 @@ namespace NomadCars.Controllers
         }
 
         // GET: People/Details/5
-        [Authorize]
+        [Authorize(Roles = "Staff")]
         public ActionResult CustomerDetails()
         {
 
@@ -131,6 +132,7 @@ namespace NomadCars.Controllers
         }
 
         // GET: People/Delete/5
+        [Authorize(Roles = "Staff")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -148,6 +150,7 @@ namespace NomadCars.Controllers
         // POST: People/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Staff")]
         public ActionResult DeleteConfirmed(int id)
         {
             Person person = db.People.Find(id);

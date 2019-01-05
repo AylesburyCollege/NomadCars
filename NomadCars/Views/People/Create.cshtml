@@ -1,4 +1,7 @@
 ﻿@model NomadCars.Models.Person
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 @{
     ViewBag.Title = "Create";
@@ -7,10 +10,10 @@
 <h2>Add Personal Details</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Person Details</h4>
         <hr />

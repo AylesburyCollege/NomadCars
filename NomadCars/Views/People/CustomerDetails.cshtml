@@ -1,5 +1,7 @@
 ﻿@model NomadCars.Models.Person
-
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 @{
     ViewBag.Title = "Details";
 }
@@ -16,20 +18,20 @@
             <div class="panel-body">
                 <dl class="dl-horizontal">
                     @*@*<dt>
-                        @Html.DisplayNameFor(model => model.Address.House)
-                    </dt>
+                            @Html.DisplayNameFor(model => model.Address.House)
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Address.House)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Address.House)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Staff.Department)
-                    </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Staff.Department)
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Staff.Department)
-                    </dd>*@
+                        <dd>
+                            @Html.DisplayFor(model => model.Staff.Department)
+                        </dd>*@
 
                     <dt>
                         @Html.DisplayNameFor(model => model.FirstName)
@@ -105,13 +107,13 @@
 
                 </dl>
                 <p class="text-right">
-                    @Html.ActionLink("Edit Personal Details", "Edit", new { id = Model.PersonID }, new { @class="btn btn-success"})
+                    @Html.ActionLink("Edit Personal Details", "Edit", new { id = Model.PersonID }, new { @class = "btn btn-success" })
                 </p>
             </div>
         </div>
     </section>
     <section class="col-lg-6">
-        <div class="panel panel-default">
+        <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title">Address Details</h3>
             </div>
@@ -160,7 +162,7 @@
 
                 </dl>
                 <p class="text-right">
-                    @Html.ActionLink("Edit Address Details", "Edit", new { id = Model.PersonID }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Edit Address Details", "Edit", "Addresses", new { id = Model.PersonID }, new { @class = "btn btn-success" })
                 </p>
             </div>
         </div>
@@ -173,7 +175,7 @@
                 <h3 class="panel-title">Payment Card Details</h3>
             </div>
             <div class="panel-body">
- @*Payment Card details*@
+                @*Payment Card details*@
                 <p class="text-right">
                     @Html.ActionLink("Edit Your Details", "Edit", new { id = Model.PersonID }, new { @class = "btn btn-success" })
                 </p>
@@ -183,7 +185,7 @@
     <section class="col-lg-6">
         @if (Model.IsStaff)
         {
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Staff Details</h3>
                 </div>
@@ -215,7 +217,7 @@
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => model.Staff.Salary)    
+                            @Html.DisplayNameFor(model => model.Staff.Salary)
                         </dt>
 
                         <dd>
@@ -234,11 +236,11 @@
                             @Html.DisplayFor(model => model.Staff.Description)
                         </dd>
                     </dl>
-                   <p class="text-right">
-                       @Html.ActionLink("Edit Staff Details", "Edit", new {id = Model.PersonID }, new { @class = "btn btn-success" })
-                   </p>
-                    
-                    
+                    <p class="text-right">
+                        @Html.ActionLink("Edit Staff Details", "Edit", "Staffs", new { id = Model.PersonID }, new { @class = "btn btn-success" })
+                    </p>
+
+
                 </div>
             </div>
         }
@@ -246,7 +248,7 @@
         {
             //a button to proceed to car payment
         }
-     </section>
+    </section>
 </section>
 
 

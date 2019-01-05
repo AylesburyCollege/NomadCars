@@ -11,6 +11,7 @@ using NomadCars.Models;
 
 namespace NomadCars.Controllers
 {
+    [Authorize(Roles = "Staff")]
     public class StaffsController : Controller
     {
         private NomadDbContext db = new NomadDbContext();
@@ -89,7 +90,7 @@ namespace NomadCars.Controllers
             {
                 db.Entry(staff).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("CustomerDetails", "People");
             }
             ViewBag.StaffID = new SelectList(db.People, "PersonID", "FirstName", staff.StaffID);
             return View(staff);

@@ -62,7 +62,6 @@ namespace NomadCars.Models
         Hatchback,
         Saloon,
         SUV
-        
     }
     public class CarSpec
     {

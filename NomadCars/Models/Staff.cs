@@ -55,7 +55,7 @@ namespace NomadCars.Models
         /// <summary>
         /// The monthly payment of the employee.
         /// </summary>
-        [Required,DisplayFormat(DataFormatString ="{0:c}", ApplyFormatInEditMode = true)]
+        [Required,DisplayFormat(DataFormatString ="{0:c}", ApplyFormatInEditMode = false)]
         [Display(Name ="Annual Salary")]
         public decimal Salary { get; set; }
 

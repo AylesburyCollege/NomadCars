@@ -11,11 +11,13 @@ using NomadCars.Models;
 
 namespace NomadCars.Controllers
 {
+    [Authorize]
     public class AddressesController : Controller
     {
         private NomadDbContext db = new NomadDbContext();
 
         // GET: Addresses
+        [Authorize(Roles = "Staff")]
         public ActionResult Index()
         {
             var addresses = db.Addresses.Include(a => a.Person);
@@ -23,6 +25,7 @@ namespace NomadCars.Controllers
         }
 
         // GET: Addresses/Details/5
+        [Authorize(Roles = "Staff")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -89,13 +92,14 @@ namespace NomadCars.Controllers
             {
                 db.Entry(address).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("CustomerDetails", "People");
             }
             ViewBag.AddressID = new SelectList(db.People, "PersonID", "FirstName", address.AddressID);
             return View(address);
         }
 
         // GET: Addresses/Delete/5
+        [Authorize(Roles = "Staff")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,6 +117,7 @@ namespace NomadCars.Controllers
         // POST: Addresses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Staff")]
         public ActionResult DeleteConfirmed(int id)
         {
             Address address = db.Addresses.Find(id);
