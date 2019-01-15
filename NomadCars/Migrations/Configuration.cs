@@ -496,7 +496,8 @@ namespace NomadCars.Migrations
             CarImageList.ForEach(s => context.CarImages.AddOrUpdate(p => p.CarImageID, s));
             context.SaveChanges();
         }
-
+        
+        // William
         private void SeedAddresses(NomadDbContext context)
         {
             var addressList = new List<Address>
@@ -597,6 +598,7 @@ namespace NomadCars.Migrations
             context.SaveChanges();
         }
 
+        // Daniel
         private void SeedAccessory(NomadDbContext context)
         {
             var AccessoryList = new List<Accessory>
@@ -663,6 +665,7 @@ namespace NomadCars.Migrations
             context.SaveChanges();
         }
 
+        // William
         private void SeedStaff(NomadDbContext context)
         {
             var StaffList = new List<Staff>
@@ -706,6 +709,7 @@ namespace NomadCars.Migrations
             context.SaveChanges();
         }
 
+        // Zeeshan
         private void SeedCars(NomadDbContext context)
         {
             var CarList = new List<Car>
@@ -721,6 +725,7 @@ namespace NomadCars.Migrations
                     TransmissionType = TransmissionTypes.Automatic,
                     NoPreviousOwner = 3,
                     AccelerationTo60 = 6,
+                    Price = 19165m,
                     Sold = false,
                     Delivered = false,
                     CO2Emissions = 139
@@ -737,6 +742,7 @@ namespace NomadCars.Migrations
                     TransmissionType = TransmissionTypes.Manual,
                     NoPreviousOwner = 1,
                     AccelerationTo60 = 5,
+                    Price = 12647m,
                     Sold = false,
                     Delivered = false,
                     CO2Emissions = 178
@@ -753,6 +759,7 @@ namespace NomadCars.Migrations
                     TransmissionType = TransmissionTypes.Manual,
                     NoPreviousOwner = 5,
                     AccelerationTo60 = 9,
+                    Price = 8946m,
                     Sold = false,
                     Delivered = false,
                     CO2Emissions = 103
@@ -769,6 +776,7 @@ namespace NomadCars.Migrations
                     TransmissionType = TransmissionTypes.Automatic,
                     NoPreviousOwner = 2,
                     AccelerationTo60 = 6,
+                    Price = 24032m,
                     Sold = false,
                     Delivered = false,
                     CO2Emissions = 170
@@ -785,6 +793,7 @@ namespace NomadCars.Migrations
                     TransmissionType = TransmissionTypes.Automatic,
                     NoPreviousOwner = 1,
                     AccelerationTo60 = 4,
+                    Price = 65027m,
                     Sold = false,
                     Delivered = false,
                     CO2Emissions = 49
@@ -797,6 +806,7 @@ namespace NomadCars.Migrations
             context.SaveChanges();
         }
 
+        // Zeeshan
         private void SeedCarSpec(NomadDbContext context)
         {
             var SpecList = new List<CarSpec>

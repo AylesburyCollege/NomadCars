@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201812201527092_UpdatePurchase.Designer.cs">
       <DependentUpon>201812201527092_UpdatePurchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901151443567_CarPrice.cs" />
+    <Compile Include="Migrations\201901151443567_CarPrice.Designer.cs">
+      <DependentUpon>201901151443567_CarPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -406,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812201527092_UpdatePurchase.resx">
       <DependentUpon>201812201527092_UpdatePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901151443567_CarPrice.resx">
+      <DependentUpon>201901151443567_CarPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -62,6 +62,12 @@ namespace NomadCars.Models
         public int AccelerationTo60 { get; set; }
         
         /// <summary>
+        /// The total price of the car.
+        /// </summary>
+        [Required, DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = false)]
+        public decimal Price { get; set; }
+
+        /// <summary>
         /// A specification to state whether or not the car is sold.
         /// </summary>
         public bool Sold { get; set; }
