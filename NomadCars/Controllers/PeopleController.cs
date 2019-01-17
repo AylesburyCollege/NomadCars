@@ -26,6 +26,7 @@ namespace NomadCars.Controllers
         private Person customer;
 
         // GET: People        
+        [Authorize(Roles = "Staff")]
         public ActionResult Index()
         {
             var people = db.People.Include(p => p.Address).Include(p => p.Staff);

@@ -68,6 +68,22 @@ namespace NomadCars.Models
         public decimal Price { get; set; }
 
         /// <summary>
+        /// Calculate the monthly cost of the car from the deposit given by the customer. 
+        /// </summary>
+        public decimal GetCostPerMonth()
+        {
+            return (Price - GetDeposit()) * 1.06m / 36;
+        }
+
+        /// <summary>
+        /// The minimum deposit that needs to be given to allow monthly payments.
+        /// </summary>
+        public decimal GetDeposit()
+        {
+            return Price * 0.2m;
+        }
+
+        /// <summary>
         /// A specification to state whether or not the car is sold.
         /// </summary>
         public bool Sold { get; set; }
