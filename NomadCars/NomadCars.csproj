@@ -287,6 +287,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\BMW116D.jpg" />
     <Content Include="Images\BMW330D.jpg" />
+    <Content Include="Images\BMW330D1.jpg" />
+    <Content Include="Images\BMW330D2.jpg" />
+    <Content Include="Images\BMW330D3.jpg" />
+    <Content Include="Images\BMW330D4.jpg" />
+    <Content Include="Images\BMW330D5.jpg" />
     <Content Include="Images\BMW420D.jpg" />
     <Content Include="Images\BMWI8.jpg" />
     <Content Include="Images\BMWX1.jpg" />

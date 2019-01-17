@@ -487,9 +487,50 @@ namespace NomadCars.Migrations
                     Description = "BMW330D Description",
                     ImageFormat = ImageFormats.jpg,
                     CarID = 2,
-                    ImageURL = "~/Images/BMW330D.jpg",
+                    ImageURL = "~/Images/BMW330D1.jpg",
+                    Position = ImagePositions.CAR_SIDE
+                },
+                new CarImage
+                {
+                    CarImageID = 2,
+                    Caption = "BMW330D",
+                    Description = "BMW330D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "~/Images/BMW330D2.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                },
+                 new CarImage
+                {
+                    CarImageID = 3,
+                    Caption = "BMW330D",
+                    Description = "BMW330D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "~/Images/BMW330D3.jpg",
                     Position = ImagePositions.CAR_FRONT
+                },
+                  new CarImage
+                {
+                    CarImageID = 4,
+                    Caption = "BMW330D",
+                    Description = "BMW330D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "~/Images/BMW330D4.jpg",
+                    Position = ImagePositions.CAR_BACK
+                },
+                   new CarImage
+                {
+                    CarImageID = 5,
+                    Caption = "BMW330D",
+                    Description = "BMW330D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "~/Images/BMW330D5.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
                 }
+
 
             };
 
