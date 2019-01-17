@@ -15,10 +15,15 @@ namespace NomadCars.Models
 
     public enum CarModels
     {
+        [Display(Name = "330d")]
         BMW_330d,
+        [Display(Name = "420d")]
         BMW_420d,
+        [Display(Name = "116d")]
         BMW_116d,
+        [Display(Name = "X1")]
         BMW_X1,
+        [Display(Name = "i8")]
         BMW_i8,
     }
 

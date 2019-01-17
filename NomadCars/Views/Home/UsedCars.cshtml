@@ -1,7 +1,25 @@
-﻿@{
+﻿@model IEnumerable<NomadCars.Models.Car>
+@using NomadCars.Models
+
+@{
     ViewBag.Title = "Used Cars";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<header class="jumbotron">
+    <h2>Nomad Cars</h2>
+    <h3>Currenlty Available Used Cars</h3>
+</header>
 
-<p>Use this area to provide additional information.</p>
+@foreach(var car in Model)
+{
+<section class="row">
+    <section class="col-lg-4">
+        <img src="https://via.placeholder.com/150" alt="Image of car" title="image of car" />
+    </section>
+    <section class="col-lg-6">
+        <h2>@car.CarSpec.Make @car.CarSpec.Model.GetDisplayName()</h2>
+    </section>
+    <section class="col-lg-2"></section>
+</section>
+}
+
+
