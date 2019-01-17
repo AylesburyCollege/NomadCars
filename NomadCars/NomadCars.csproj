@@ -372,6 +372,8 @@
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\People\CustomerDetails.cshtml" />
     <Content Include="Views\People\_Form.cshtml" />
+    <Content Include="Views\Home\Finance.cshtml" />
+    <Content Include="Views\Home\UsedCars.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

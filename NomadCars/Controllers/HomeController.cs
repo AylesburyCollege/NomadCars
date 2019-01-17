@@ -19,5 +19,17 @@ namespace NomadCars.Controllers
 
             return View();
         }
+        public ActionResult Finance()
+        {
+            ViewBag.Message = "Your finance page.";
+
+            return View();
+        }
+        public ActionResult UsedCars()
+        {
+            ViewBag.Message = "Your finance page.";
+
+            return View();
+        }
     }
 }

@@ -11,6 +11,12 @@ using NomadCars.Models;
 
 namespace NomadCars.Controllers
 {
+    /// <summary>
+    /// Author: Zeeshan
+    /// This controller will allow members of staff to
+    /// add, edit, delete, and view cars
+    /// </summary>
+    [Authorize(Roles = "Staff")]
     public class CarsController : Controller
     {
         private NomadDbContext db = new NomadDbContext();
