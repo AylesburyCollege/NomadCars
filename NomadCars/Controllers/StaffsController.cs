@@ -11,6 +11,14 @@ using NomadCars.Models;
 
 namespace NomadCars.Controllers
 {
+    /// <summary>
+    /// William
+    /// 
+    /// This controller will enable staff to create and 
+    /// manage their own details. Only someone will a staff
+    /// role can access these management pages.
+    /// </summary>
+
     [Authorize(Roles = "Staff")]
     public class StaffsController : Controller
     {

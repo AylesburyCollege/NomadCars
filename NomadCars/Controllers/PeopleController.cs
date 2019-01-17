@@ -8,6 +8,17 @@ using NomadCars.Models;
 
 namespace NomadCars.Controllers
 {
+    /// <summary>
+    /// Author: William
+    /// 
+    /// This controller will allow people, both staff
+    /// and customers to edit their specific details. 
+    /// However, only staff can view or delete 
+    /// people's details.
+    /// Customers should also only be able to edit their
+    /// own details.
+    /// </summary>
+    
     [Authorize]
     public class PeopleController : Controller
     {

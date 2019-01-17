@@ -11,6 +11,16 @@ using NomadCars.Models;
 
 namespace NomadCars.Controllers
 {
+    /// <summary>
+    /// Author: William 
+    /// 
+    /// This controller will allow the management 
+    /// of people's address data. People can create 
+    /// and edit their own individual data but only 
+    /// staff can view the table of data, view address
+    /// details and delete entries.
+    /// </summary>
+
     [Authorize]
     public class AddressesController : Controller
     {
