@@ -9,17 +9,21 @@
     <h3>Currenlty Available Used Cars</h3>
 </header>
 
-@foreach(var car in Model)
+@foreach (var car in Model)
 {
-<section class="row">
-    <section class="col-lg-4">
-        <img src="https://via.placeholder.com/150" alt="Image of car" title="image of car" />
+    <section class="row">
+        <section class="col-lg-4">
+            @if (car.ImagesList.Count() == 0)
+            {
+                <img src="https://via.placeholder.com/350x300" alt="Image of car" title="image of car" />
+            }
+        </section>
+        <section class="col-lg-6">
+            <h2>@car.CarSpec.Make @car.CarSpec.Model.GetDisplayName()</h2>
+        </section>
+        <section class="col-lg-2"></section>
     </section>
-    <section class="col-lg-6">
-        <h2>@car.CarSpec.Make @car.CarSpec.Model.GetDisplayName()</h2>
-    </section>
-    <section class="col-lg-2"></section>
-</section>
+    <br /><br />
 }
 
 
