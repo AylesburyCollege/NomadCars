@@ -390,6 +390,7 @@
     <Content Include="Views\PaymentCards\Details.cshtml" />
     <Content Include="Views\PaymentCards\Edit.cshtml" />
     <Content Include="Views\PaymentCards\Index.cshtml" />
+    <Content Include="Views\Cars\CarDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

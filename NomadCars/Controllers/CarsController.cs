@@ -16,7 +16,7 @@ namespace NomadCars.Controllers
     /// This controller will allow members of staff to
     /// add, edit, delete, and view cars
     /// </summary>
-    [Authorize(Roles = "Staff")]
+    //[Authorize(Roles = "Staff")]
     public class CarsController : Controller
     {
         private NomadDbContext db = new NomadDbContext();
@@ -40,7 +40,21 @@ namespace NomadCars.Controllers
             {
                 return HttpNotFound();
             }
-            return View(car);
+            return View();
+        }
+
+        public ActionResult CarDetails(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Car car = db.Cars.Find(id);
+            if (car == null)
+            {
+                return HttpNotFound();
+            }
+            return View("~/Views/Cars/CarDetails.cshtml");
         }
 
         // GET: Cars/Create
