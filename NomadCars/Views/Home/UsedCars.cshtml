@@ -20,8 +20,14 @@
         </section>
         <section class="col-lg-6">
             <h2>@car.CarSpec.Make @car.CarSpec.Model.GetDisplayName()</h2>
+            <h4>
+                @car.TransmissionType | @car.CarSpec.Petrol | 
+                @car.NumberPlate | @car.CarSpec.DriveTrain.GetDisplayName() | @car.Mileage miles
+            </h4>
         </section>
-        <section class="col-lg-2"></section>
+        <section class="col-lg-2">
+            <h2>£@car.Price</h2>
+        </section>
     </section>
     <br /><br />
 }
