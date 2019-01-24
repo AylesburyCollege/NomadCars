@@ -21,7 +21,7 @@
         <section class="col-lg-6">
             <h2>@car.CarSpec.Make @car.CarSpec.Model.GetDisplayName()</h2>
             <h4>
-                @car.TransmissionType | @car.CarSpec.Petrol | 
+                @car.TransmissionType | @car.CarSpec.FuelType.GetDisplayName() | 
                 @car.NumberPlate | @car.CarSpec.DriveTrain.GetDisplayName() | @car.Mileage miles
             </h4>
         </section>
