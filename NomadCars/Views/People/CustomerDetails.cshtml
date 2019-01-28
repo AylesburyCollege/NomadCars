@@ -175,9 +175,52 @@
                 <h3 class="panel-title">Payment Card Details</h3>
             </div>
             <div class="panel-body">
-                @*Payment Card details*@
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PaymentCard.NameOnCard)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PaymentCard.NameOnCard)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PaymentCard.CardType)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PaymentCard.CardType)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PaymentCard.CardNumber)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PaymentCard.CardNumber)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PaymentCard.ExpiryMonth)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PaymentCard.ExpiryMonth)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PaymentCard.ExpiryYear)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PaymentCard.ExpiryYear)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PaymentCard.SecurityNumber)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PaymentCard.SecurityNumber)
+                    </dd>
+                </dl>
+                               
                 <p class="text-right">
-                    @Html.ActionLink("Edit Your Details", "Edit", new { id = Model.PersonID }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Edit Payment Details", "Edit", "PaymentCards", new { id = Model.PersonID }, new { @class = "btn btn-success" })
                 </p>
             </div>
         </div>
