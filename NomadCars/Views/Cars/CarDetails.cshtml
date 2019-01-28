@@ -10,3 +10,29 @@
 
 <h2>Car Details</h2>
 
+@foreach (var car in Model)
+{
+    <section class="row">
+        <section class="col-lg-4">
+            @if (car.ImagesList.Count() == 0)
+            {
+                <img src="https://via.placeholder.com/350x300" alt="Image of car" title="image of car" />
+            }
+        </section>
+        <section class="col-lg-6">
+            <h2>@car.CarSpec.Make @car.CarSpec.Model.GetDisplayName()</h2>
+            <h4>
+                @car.TransmissionType | @car.CarSpec.FuelType.GetDisplayName() |
+                @car.NumberPlate | @car.CarSpec.DriveTrain.GetDisplayName() | @car.Mileage miles
+            </h4>
+        </section>
+        <section class="col-lg-2">
+            <h2>£@car.Price</h2>
+            <br /><br /><br /><br /> <br /><br />
+            @Html.ActionLink("View Details", "CarDetails", "Cars", new { id = car.CarID }, new { @class = "btn btn-success" })
+        </section>
+    </section>
+    <br /><br />
+}
+
+
