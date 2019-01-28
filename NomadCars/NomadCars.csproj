@@ -299,7 +299,10 @@
     <Content Include="Images\BMW420D.jpg" />
     <Content Include="Images\BMWI8.jpg" />
     <Content Include="Images\BMWX1.jpg" />
+    <Content Include="Images\Staff\CPavatar.JPG" />
+    <Content Include="Images\Staff\DSSavatar.JPG" />
     <Content Include="Images\Staff\WFavatar.JPG" />
+    <Content Include="Images\Staff\ZAavatar.JPG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
