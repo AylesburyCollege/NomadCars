@@ -500,7 +500,7 @@ namespace NomadCars.Migrations
                     ImageURL = "~/Images/BMW330D2.jpg",
                     Position = ImagePositions.CAR_INTERIOR
                 },
-                 new CarImage
+                new CarImage
                 {
                     CarImageID = 3,
                     Caption = "BMW330D",
@@ -510,7 +510,7 @@ namespace NomadCars.Migrations
                     ImageURL = "~/Images/BMW330D3.jpg",
                     Position = ImagePositions.CAR_FRONT
                 },
-                  new CarImage
+                new CarImage
                 {
                     CarImageID = 4,
                     Caption = "BMW330D",
@@ -520,7 +520,7 @@ namespace NomadCars.Migrations
                     ImageURL = "~/Images/BMW330D4.jpg",
                     Position = ImagePositions.CAR_BACK
                 },
-                   new CarImage
+                new CarImage
                 {
                     CarImageID = 5,
                     Caption = "BMW330D",
@@ -717,7 +717,8 @@ namespace NomadCars.Migrations
                     Department = DepartmentOptions.MANAGEMENT,
                     JobPosition = JobPositionOptions.LOCATION_MANAGER,
                     Salary = 24000m,
-                    StartDate = new System.DateTime(2017,10, 10)
+                    StartDate = new System.DateTime(2017,10, 10),       
+                    ImageURL = "WFavatar.JPG"
                 },
                 new Staff
                 {
@@ -725,7 +726,8 @@ namespace NomadCars.Migrations
                     Department = DepartmentOptions.ACCOUNTS,
                     JobPosition = JobPositionOptions.ACCOUNTANT,
                     Salary = 28000m,
-                    StartDate = new System.DateTime(2017, 10, 10)
+                    StartDate = new System.DateTime(2017, 10, 10),
+                    ImageURL = "CPavatar.JPG"
                 },
                 new Staff
                 {
@@ -733,7 +735,8 @@ namespace NomadCars.Migrations
                     Department = DepartmentOptions.MANAGEMENT,
                     JobPosition = JobPositionOptions.SALES_MANAGER,
                     Salary = 30000m,
-                    StartDate = new System.DateTime(2017, 10, 10)
+                    StartDate = new System.DateTime(2017, 10, 10),
+                    ImageURL = "DSSavatar.JPG"
                 },
                 new Staff
                 {
@@ -741,7 +744,8 @@ namespace NomadCars.Migrations
                     Department = DepartmentOptions.SALES,
                     JobPosition = JobPositionOptions.SALES_REPRESENTATIVE,
                     Salary = 21000m,
-                    StartDate = new System.DateTime(2017, 10, 10)
+                    StartDate = new System.DateTime(2017, 10, 10),
+                    ImageURL = "ZAavatar.JPG"
                 }
 
             };
