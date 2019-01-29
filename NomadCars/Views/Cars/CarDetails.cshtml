@@ -7,8 +7,10 @@
 @{
     ViewBag.Title = "CarDetails";
 }
-
-<h2>Car Details</h2>
+<header class="jumbotron">
+    <h2>Nomad Cars</h2>
+    <h3>Details of @*@car.CarSpec.Make @car.CarSpec.Model.GetDisplayName()*@</h3>
+</header>
 
 @foreach (var car in Model)
 {

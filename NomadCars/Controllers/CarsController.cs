@@ -20,8 +20,10 @@ namespace NomadCars.Controllers
     public class CarsController : Controller
     {
         private NomadDbContext db = new NomadDbContext();
+        //private Car car;
 
         // GET: Cars
+        [Authorize(Roles = "Staff")]
         public ActionResult Index()
         {
             var cars = db.Cars.Include(c => c.CarSpec);
@@ -29,6 +31,7 @@ namespace NomadCars.Controllers
         }
 
         // GET: Cars/Details/5
+        [Authorize (Roles = "Staff")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -40,21 +43,19 @@ namespace NomadCars.Controllers
             {
                 return HttpNotFound();
             }
-            return View();
+            return View(car);
         }
 
-        public ActionResult CarDetails(int? id)
+        public ActionResult CarDetails()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Car car = db.Cars.Find(id);
+            Car car = db.Cars.Find();
+
             if (car == null)
             {
                 return HttpNotFound();
             }
-            return View("~/Views/Cars/CarDetails.cshtml");
+            return View(car);
+          
         }
 
         // GET: Cars/Create

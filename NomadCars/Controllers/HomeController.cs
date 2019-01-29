@@ -32,8 +32,6 @@ namespace NomadCars.Controllers
 
         public ActionResult UsedCars()
         {
-            ViewBag.Message = "Your finance page.";
-
             var cars = db.Cars;
             return View(cars.ToList());
         }
