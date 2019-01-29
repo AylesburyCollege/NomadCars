@@ -37,7 +37,7 @@
         <section class="col-lg-2">
             <h2>£@car.Price</h2>
             <br /><br /><br /><br /> <br /><br />
-            @Html.ActionLink("View Details", "CarDetails", "Cars", null, new { @class = "btn btn-success" })
+            @Html.ActionLink("View Details", "CarDetails", "Cars", new { id = car.CarID}, new { @class = "btn btn-success" })
         </section>
     </section>
     <br /><br />

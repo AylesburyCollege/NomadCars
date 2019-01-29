@@ -65,7 +65,7 @@ namespace NomadCars.Models
         /// </summary>
         /// 
         [Required, DataType(DataType.DateTime), Display(Name = "Start Date"), 
-            DisplayFormat(DataFormatString = "{0:d}",ApplyFormatInEditMode = true)]
+            DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}",ApplyFormatInEditMode = true)]
         public DateTime StartDate { get; set; }
 
         /// <summary>

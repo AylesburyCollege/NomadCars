@@ -46,9 +46,9 @@ namespace NomadCars.Controllers
             return View(car);
         }
 
-        public ActionResult CarDetails()
+        public ActionResult CarDetails(int id)
         {
-            Car car = db.Cars.Find();
+            Car car = db.Cars.Find(id);
 
             if (car == null)
             {
