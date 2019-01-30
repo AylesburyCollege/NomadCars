@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -27,9 +28,33 @@ namespace NomadCars.Controllers
 
         // GET: People        
         [Authorize(Roles = "Staff")]
-        public ActionResult Index()
+        public ViewResult Index(string sortOrder, string searchString)
         {
-            var people = db.People.Include(p => p.Address).Include(p => p.Staff);
+            //var people = db.People.Include(p => p.Address).Include(p => p.Staff);
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParam = sortOrder == "DOB" ? "DOB_desc" : "DOB";
+            var people = from s in db.People
+                         select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                people = people.Where(s => s.LastName.Contains(searchString)
+                                    || s.FirstName.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    people = people.OrderByDescending(s => s.LastName);
+                    break;
+                case "DOB":
+                    people = people.OrderBy(s => s.DateOfBirth);
+                    break;
+                case "DOB_desc":
+                    people = people.OrderByDescending(s => s.DateOfBirth);
+                    break;
+                default:
+                    people = people.OrderBy(s => s.LastName);
+                    break;
+            }
             return View(people.ToList());
         }
 
