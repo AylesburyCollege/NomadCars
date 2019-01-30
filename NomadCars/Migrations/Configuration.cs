@@ -43,7 +43,7 @@ namespace NomadCars.Migrations
             SeedAccessory(context);
 
             // Daniel
-            //SeedImages(context);
+            SeedImages(context);
             
             // Connor
             //SeedPurchases(context);
@@ -486,8 +486,8 @@ namespace NomadCars.Migrations
                     Caption = "BMW330D",
                     Description = "BMW330D Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "~/Images/BMW330D1.jpg",
+                    CarID = 1,
+                    ImageURL = "/Images/BMW330D1.jpg",
                     Position = ImagePositions.CAR_SIDE
                 },
                 new CarImage
@@ -496,8 +496,8 @@ namespace NomadCars.Migrations
                     Caption = "BMW330D",
                     Description = "BMW330D Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "~/Images/BMW330D2.jpg",
+                    CarID = 1,
+                    ImageURL = "/Images/BMW330D2.jpg",
                     Position = ImagePositions.CAR_INTERIOR
                 },
                 new CarImage
@@ -506,8 +506,8 @@ namespace NomadCars.Migrations
                     Caption = "BMW330D",
                     Description = "BMW330D Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "~/Images/BMW330D3.jpg",
+                    CarID = 1,
+                    ImageURL = "/Images/BMW330D3.jpg",
                     Position = ImagePositions.CAR_FRONT
                 },
                 new CarImage
@@ -516,8 +516,8 @@ namespace NomadCars.Migrations
                     Caption = "BMW330D",
                     Description = "BMW330D Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "~/Images/BMW330D4.jpg",
+                    CarID = 1,
+                    ImageURL = "/Images/BMW330D4.jpg",
                     Position = ImagePositions.CAR_BACK
                 },
                 new CarImage
@@ -526,10 +526,50 @@ namespace NomadCars.Migrations
                     Caption = "BMW330D",
                     Description = "BMW330D Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "~/Images/BMW330D5.jpg",
+                    CarID = 1,
+                    ImageURL = "/Images/BMW330D5.jpg",
                     Position = ImagePositions.CAR_INTERIOR
-                }
+                },
+                new CarImage
+                {
+                    CarImageID = 6,
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "/Images/BMW420D1.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                },
+                new CarImage
+                {
+                    CarImageID = 6,
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "/Images/BMW420D1.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                },
+                new CarImage
+                {
+                    CarImageID = 6,
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "/Images/BMW420D1.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                },
+                new CarImage
+                {
+                    CarImageID = 6,
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "/Images/BMW420D1.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                },
 
 
             };
