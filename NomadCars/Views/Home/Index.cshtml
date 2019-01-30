@@ -2,10 +2,10 @@
     ViewBag.Title = "Home Page";
 }
 
-<section class="jobotron>">
+<header class="jumbotron">
     <h1>Nomad Cars</h1>
-    <h2> Home Page</h2>
-</section>
+    <h2>@ViewBag.Title</h2>
+</header>
 <section id="carousel-cars" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -17,42 +17,42 @@
     </ol>
 
     <!-- Wrapper for slides -->
-     <section class="carousel-inner" role="listbox">
-         <figure class="item active">
-             <img src="~/Images/BMW420D.jpg" alt="BMW 420D">
-             <figcaption class="carousel-caption">
-                 <h2>BMW 420D </h2>
-             </figcaption>
-         </figure>
-         <figure class="item">
-             <img src="~/Images/BMW116D.jpg" alt="BMW 116D" />
-             <figcaption class="carousel-caption">
-                 <h2> BMW 116D </h2>
-             </figcaption>
-         </figure>
-         
-         <figure class="item">
-             <img src="~/Images/BMW330D.jpg" alt=" BMW 330D" />
-             <figcaption class="carousel-caption">
-                 <h2> BMW 330D </h2>
-             </figcaption>
-         </figure>
-         
-         <figure class="item">
-             <img src="~/Images/BMWX1.jpg" alt="BMW X1" />
-             <figcaption class="carousel-caption">
-                 <h2> BMW X1 </h2>
-             </figcaption>
-         </figure>
-         
-         <figure class="item">
-             <img src="~/Images/BMWI8.jpg" alt="BMW I8" />
-             <figcaption class="carousel-caption">
-                 <h2> BMW I8 </h2>
-             </figcaption>
-         </figure>
-         
-     </section>
+    <section class="carousel-inner" role="listbox">
+        <figure class="item active">
+            <img src="~/Images/BMW420D.jpg" alt="BMW 420D">
+            <figcaption class="carousel-caption">
+                <h2>BMW 420D </h2>
+            </figcaption>
+        </figure>
+        <figure class="item">
+            <img src="~/Images/BMW116D.jpg" alt="BMW 116D" />
+            <figcaption class="carousel-caption">
+                <h2> BMW 116D </h2>
+            </figcaption>
+        </figure>
+
+        <figure class="item">
+            <img src="~/Images/BMW330D.jpg" alt=" BMW 330D" />
+            <figcaption class="carousel-caption">
+                <h2> BMW 330D </h2>
+            </figcaption>
+        </figure>
+
+        <figure class="item">
+            <img src="~/Images/BMWX1.jpg" alt="BMW X1" />
+            <figcaption class="carousel-caption">
+                <h2> BMW X1 </h2>
+            </figcaption>
+        </figure>
+
+        <figure class="item">
+            <img src="~/Images/BMWI8.jpg" alt="BMW I8" />
+            <figcaption class="carousel-caption">
+                <h2> BMW I8 </h2>
+            </figcaption>
+        </figure>
+
+    </section>
 
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-cars" role="button" data-slide="prev">
@@ -65,7 +65,10 @@
     </a>
 </section>
 <section>
-    @Html.ActionLink("Buy or Reserve", "CustomerDetails", "People", null, new {@class="btn btn-info" })
+    <br />
+    <center>
+        @Html.ActionLink("Buy or Reserve", "CustomerDetails", "People", null, new { @class = "btn btn-info" })
+    </center>
 </section>
 
 

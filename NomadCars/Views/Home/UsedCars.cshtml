@@ -5,8 +5,8 @@
     ViewBag.Title = "Used Cars";
 }
 <header class="jumbotron">
-    <h2>Nomad Cars</h2>
-    <h3>Currenlty Available Used Cars</h3>
+    <h1>Nomad Cars</h1>
+    <h2>Currently Available Used Cars</h2>
 </header>
 
 @foreach (var car in Model)
@@ -24,20 +24,19 @@
                 @car.TransmissionType | @car.CarSpec.FuelType.GetDisplayName() |
                 @car.NumberPlate | @car.CarSpec.DriveTrain.GetDisplayName() | @car.Mileage miles
             </h4>
-            <br />
-            <h5>
-                Paragraph of text goes here
-            </h5>
-            <br /><br /><br /><br />
+            <br /><br /><br />
             <img src="https://via.placeholder.com/100x80" alt="front" title="image of car" />
             <img src="https://via.placeholder.com/100x80" alt="left side" title="image of car" />
             <img src="https://via.placeholder.com/100x80" alt="right side" title="image of car" />
             <img src="https://via.placeholder.com/100x80" alt="back" title="image of car" />
         </section>
         <section class="col-lg-2">
-            <h2>£@car.Price</h2>
-            <br /><br /><br /><br /> <br /><br />
-            @Html.ActionLink("View Details", "CarDetails", "Cars", new { id = car.CarID}, new { @class = "btn btn-success" })
+            <center>
+                <h2>£@car.Price</h2>
+                <br /><br /><br /><br /> <br /><br />
+
+                @Html.ActionLink("View Details", "CarDetails", "Cars", new { id = car.CarID }, new { @class = "btn btn-success" })
+            </center>
         </section>
     </section>
     <br /><br />

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @{
-    ViewBag.Title = "CarDetails";
+    ViewBag.Title = "Car Details";
 }
 <header class="jumbotron">
     <h2>Nomad Cars</h2>
@@ -28,11 +28,15 @@
             </h4>
         </section>
         <section class="col-lg-2">
-            <h2>£@Model.Price</h2>
-            <br /><br /><br /><br /> <br /><br />
-            @Html.ActionLink("Enquire", "Enquire", "Purchases", new { id = Model.CarID }, new { @class = "btn btn-success" })
+            <center>
+                <h2>£@Model.Price</h2>
+                <br /><br /><br /><br /> <br /><br />
+                @Html.ActionLink("Enquire", "Enquire", "Purchases", new { id = Model.CarID }, new { @class = "btn btn-success" })
+            </center>
         </section>
     </section>
+    <br />
+    @Html.ActionLink("Back", "UsedCars", "Home", new { id = Model.CarID }, new { @class = "btn btn-success" })
     <br /><br />
 
 

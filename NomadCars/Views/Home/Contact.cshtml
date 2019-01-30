@@ -1,17 +1,46 @@
 ﻿@{
     ViewBag.Title = "Contact Us";
 }
-<section class="jobotron>">
-    <h2>Nomad Cars</h2>
-    <h3>@ViewBag.Title</h3>
+<header class="jumbotron">
+    <h1>Nomad Cars</h1>
+    <h2>@ViewBag.Title</h2>
+</header>
+
+<section class="row">
+    <section class="col-lg-4">
+        <h2>Address</h2>
+        <address>
+            Eight Kestrel Way <br />
+            Aylesbury, Bucks HP20 1AB<br /> <br />
+            Call us on <br /> 07762 123 456
+        </address>
+        <h2>Support Email</h2>
+        <address>
+            <a href="mailto:Support@example.com">william.foster@nomad.com</a><br />
+        </address>
+    </section>
+    
+    <section class="col-lg-6">
+        <h2>Maps Location</h2>
+        <address>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=HP20%201AB&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div>
+                <style>
+                    .mapouter {
+                        text-align: right;
+                        height: 500px;
+                        width: 600px;
+                    }
+
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 500px;
+                        width: 600px;
+                    }
+                </style>
+            </div>
+
+        </address>
+    </section>
 </section>
-
-<address>
-    Eight Kestrel Way <br />
-    Aylesbury, Bucks HP20 1AB<br /> <br />
-    Call us on <br /> 07762 123 456
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">william.foster@nomad.com</a><br />
-</address>
