@@ -483,94 +483,253 @@ namespace NomadCars.Migrations
                 new CarImage
                 {
                     CarImageID = 1,
-                    Caption = "BMW330D",
-                    Description = "BMW330D Description",
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
                     ImageFormat = ImageFormats.jpg,
                     CarID = 1,
-                    ImageURL = "/Images/BMW330D1.jpg",
+                    ImageURL = "/Images/BMW420D1.jpg",
                     Position = ImagePositions.CAR_SIDE
                 },
                 new CarImage
                 {
                     CarImageID = 2,
-                    Caption = "BMW330D",
-                    Description = "BMW330D Description",
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
                     ImageFormat = ImageFormats.jpg,
                     CarID = 1,
-                    ImageURL = "/Images/BMW330D2.jpg",
+                    ImageURL = "/Images/BMW420D2.jpg",
                     Position = ImagePositions.CAR_INTERIOR
                 },
                 new CarImage
                 {
                     CarImageID = 3,
-                    Caption = "BMW330D",
-                    Description = "BMW330D Description",
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
                     ImageFormat = ImageFormats.jpg,
                     CarID = 1,
-                    ImageURL = "/Images/BMW330D3.jpg",
+                    ImageURL = "/Images/BMW420D3.jpg",
                     Position = ImagePositions.CAR_FRONT
                 },
                 new CarImage
                 {
                     CarImageID = 4,
-                    Caption = "BMW330D",
-                    Description = "BMW330D Description",
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
                     ImageFormat = ImageFormats.jpg,
                     CarID = 1,
-                    ImageURL = "/Images/BMW330D4.jpg",
+                    ImageURL = "/Images/BMW420D4.jpg",
                     Position = ImagePositions.CAR_BACK
                 },
                 new CarImage
                 {
                     CarImageID = 5,
+                    Caption = "BMW420D",
+                    Description = "BMW420D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 1,
+                    ImageURL = "/Images/BMW420D5.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                },
+                new CarImage
+                {
+                    CarImageID = 6,
                     Caption = "BMW330D",
                     Description = "BMW330D Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 1,
+                    CarID = 2,
+                    ImageURL = "/Images/BMW330D1.jpg",
+                    Position = ImagePositions.CAR_SIDE
+                },
+                new CarImage
+                {
+                    CarImageID = 7,
+                    Caption = "BMW330D",
+                    Description = "BMW330D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "/Images/BMW330D2.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                },
+                new CarImage
+                {
+                    CarImageID = 8,
+                    Caption = "BMW330D",
+                    Description = "BMW330D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "/Images/BMW330D3.jpg",
+                    Position = ImagePositions.CAR_FRONT
+                },
+                new CarImage
+                {
+                    CarImageID = 9,
+                    Caption = "BMW330D",
+                    Description = "BMW330D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
+                    ImageURL = "/Images/BMW330D4.jpg",
+                    Position = ImagePositions.CAR_BACK
+                },
+                new CarImage
+                {
+                    CarImageID = 10,
+                    Caption = "BMW330D",
+                    Description = "BMW330D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 2,
                     ImageURL = "/Images/BMW330D5.jpg",
                     Position = ImagePositions.CAR_INTERIOR
                 },
                 new CarImage
                 {
-                    CarImageID = 6,
-                    Caption = "BMW420D",
-                    Description = "BMW420D Description",
+                    CarImageID = 11,
+                    Caption = "BMW116D",
+                    Description = "BMW116D Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "/Images/BMW420D1.jpg",
+                    CarID = 3,
+                    ImageURL = "/Images/BMW116D1.jpg",
+                    Position = ImagePositions.CAR_SIDE
+                },
+                new CarImage
+                {
+                    CarImageID = 12,
+                    Caption = "BMW116D",
+                    Description = "BMW116D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 3,
+                    ImageURL = "/Images/BMW116D2.jpg",
                     Position = ImagePositions.CAR_INTERIOR
                 },
                 new CarImage
                 {
-                    CarImageID = 6,
-                    Caption = "BMW420D",
-                    Description = "BMW420D Description",
+                    CarImageID = 13,
+                    Caption = "BMW116D",
+                    Description = "BMW116D Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "/Images/BMW420D1.jpg",
+                    CarID = 3,
+                    ImageURL = "/Images/BMW116D3.jpg",
+                    Position = ImagePositions.CAR_FRONT
+                },
+                new CarImage
+                {
+                    CarImageID = 14,
+                    Caption = "BMW116D",
+                    Description = "BMW116D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 3,
+                    ImageURL = "/Images/BMW116D4.jpg",
+                    Position = ImagePositions.CAR_BACK
+                },
+                new CarImage
+                {
+                    CarImageID = 15,
+                    Caption = "BMW116D",
+                    Description = "BMW116D Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 3,
+                    ImageURL = "/Images/BMW116D5.jpg",
                     Position = ImagePositions.CAR_INTERIOR
                 },
                 new CarImage
                 {
-                    CarImageID = 6,
-                    Caption = "BMW420D",
-                    Description = "BMW420D Description",
+                    CarImageID = 16,
+                    Caption = "BMWX1",
+                    Description = "BMWX1 Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "/Images/BMW420D1.jpg",
+                    CarID = 4,
+                    ImageURL = "/Images/BMWX11.jpg",
+                    Position = ImagePositions.CAR_SIDE
+                },
+                new CarImage
+                {
+                    CarImageID = 17,
+                    Caption = "BMWX1",
+                    Description = "BMWX1 Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 4,
+                    ImageURL = "/Images/BMWX12.jpg",
                     Position = ImagePositions.CAR_INTERIOR
                 },
                 new CarImage
                 {
-                    CarImageID = 6,
-                    Caption = "BMW420D",
-                    Description = "BMW420D Description",
+                    CarImageID = 18,
+                    Caption = "BMWX1",
+                    Description = "BMWX1 Description",
                     ImageFormat = ImageFormats.jpg,
-                    CarID = 2,
-                    ImageURL = "/Images/BMW420D1.jpg",
+                    CarID = 4,
+                    ImageURL = "/Images/BMWX13.jpg",
+                    Position = ImagePositions.CAR_FRONT
+                },
+                new CarImage
+                {
+                    CarImageID = 19,
+                    Caption = "BMWX1",
+                    Description = "BMWX1 Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 4,
+                    ImageURL = "/Images/BMWX14.jpg",
+                    Position = ImagePositions.CAR_BACK
+                },
+                new CarImage
+                {
+                    CarImageID = 20,
+                    Caption = "BMWX1",
+                    Description = "BMWX1 Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 4,
+                    ImageURL = "/Images/BMWX15.jpg",
                     Position = ImagePositions.CAR_INTERIOR
                 },
-
+                new CarImage
+                {
+                    CarImageID = 21,
+                    Caption = "BMWi8",
+                    Description = "BMWi8 Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 5,
+                    ImageURL = "/Images/BMWI81.jpg",
+                    Position = ImagePositions.CAR_SIDE
+                },
+                new CarImage
+                {
+                    CarImageID = 22,
+                    Caption = "BMWi8",
+                    Description = "BMWi8 Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 5,
+                    ImageURL = "/Images/BMWI82.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                },
+                new CarImage
+                {
+                    CarImageID = 23,
+                    Caption = "BMWi8",
+                    Description = "BMWi8 Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 5,
+                    ImageURL = "/Images/BMWI83.jpg",
+                    Position = ImagePositions.CAR_FRONT
+                },
+                new CarImage
+                {
+                    CarImageID = 24,
+                    Caption = "BMWi8",
+                    Description = "BMWi8 Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 5,
+                    ImageURL = "/Images/BMWI84.jpg",
+                    Position = ImagePositions.CAR_BACK
+                },
+                new CarImage
+                {
+                    CarImageID = 25,
+                    Caption = "BMWi8",
+                    Description = "BMWi8 Description",
+                    ImageFormat = ImageFormats.jpg,
+                    CarID = 5,
+                    ImageURL = "/Images/BMWI85.jpg",
+                    Position = ImagePositions.CAR_INTERIOR
+                }
 
             };
 
