@@ -1,5 +1,6 @@
-﻿@model IEnumerable<NomadCars.Models.Person>
-
+﻿@model PagedList.IPagedList<NomadCars.Models.Person>
+@using PagedList.Mvc
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Staff and Customers";
 }
@@ -16,7 +17,7 @@
 @using (Html.BeginForm())
 {
     <p>
-        Find by Last Name: @Html.TextBox("SearchString")
+        Find by Last Name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
         <input type="submit" value="Search" />
     </p>
 }
@@ -27,28 +28,28 @@
             @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.NameSortParm})
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            First Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HomePhoneNumber)
+            Home Phone Number
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MobilePhoneNumber)
+            Mobile Phone Number
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            E-Mail Address
         </th>
         <th>
             @Html.ActionLink("Date of Birth", "Index", new { sortOrder = ViewBag.DateSortParm})
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MaritalStatus)
+            Marital Status
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IsCustomer)
+            Customer?
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IsStaff)
+            Staff?
         </th>
         <th></th>
     </tr>
@@ -91,3 +92,8 @@
 }
 
 </table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter}))
