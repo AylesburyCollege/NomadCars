@@ -803,23 +803,6 @@ namespace NomadCars.Migrations
                 {
                     CarID = 1,
                     CarSpecID = 1,
-                    Colour ="White",
-                    NumberPlate = "YD17 UVV",
-                    VINNo = "2BCHV8110HB571011",
-                    Mileage = 467,
-                    TransmissionType = TransmissionTypes.Automatic,
-                    NoPreviousOwner = 3,
-                    AccelerationTo60 = 6,
-                    Price = 19165m,
-                    Sold = false,
-                    Delivered = false,
-                    CO2Emissions = 139
-
-                },
-                new Car
-                {
-                    CarID = 2,
-                    CarSpecID = 2,
                     Colour ="Grey",
                     NumberPlate = "VO13 LUW",
                     VINNo = "LM4AC11C331171079",
@@ -831,6 +814,23 @@ namespace NomadCars.Migrations
                     Sold = false,
                     Delivered = false,
                     CO2Emissions = 178
+
+                },
+                new Car
+                {
+                    CarID = 2,
+                    CarSpecID = 2,
+                    Colour ="White",
+                    NumberPlate = "YD17 UVV",
+                    VINNo = "2BCHV8110HB571011",
+                    Mileage = 467,
+                    TransmissionType = TransmissionTypes.Automatic,
+                    NoPreviousOwner = 3,
+                    AccelerationTo60 = 6,
+                    Price = 19165m,
+                    Sold = false,
+                    Delivered = false,
+                    CO2Emissions = 139
 
                 },
                 new Car
