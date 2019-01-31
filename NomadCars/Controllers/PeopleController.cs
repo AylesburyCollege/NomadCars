@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using NomadCars.DAL;
 using NomadCars.Models;
+using PagedList;
 
 namespace NomadCars.Controllers
 {
@@ -28,11 +29,22 @@ namespace NomadCars.Controllers
 
         // GET: People        
         [Authorize(Roles = "Staff")]
-        public ViewResult Index(string sortOrder, string searchString)
+        public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            //var people = db.People.Include(p => p.Address).Include(p => p.Staff);
+            ViewBag.CurrentSort = sortOrder;
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSortParam = sortOrder == "DOB" ? "DOB_desc" : "DOB";
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+
             var people = from s in db.People
                          select s;
             if (!String.IsNullOrEmpty(searchString))
@@ -55,7 +67,10 @@ namespace NomadCars.Controllers
                     people = people.OrderBy(s => s.LastName);
                     break;
             }
-            return View(people.ToList());
+
+            int pageSize = 4;
+            int pageNumber = (page ?? 1);
+            return View(people.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: People/Details/5
