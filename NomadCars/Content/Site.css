@@ -22,3 +22,13 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.main-car-image
+{
+    width:350px;
+}
+
+
+.small-car-image {
+    width: 150px;
+}

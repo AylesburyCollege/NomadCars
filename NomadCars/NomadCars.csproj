@@ -401,6 +401,9 @@
     <Content Include="Views\PaymentCards\Edit.cshtml" />
     <Content Include="Views\PaymentCards\Index.cshtml" />
     <Content Include="Views\Cars\CarDetails.cshtml" />
+    <Content Include="Views\PaymentCards\_ViewStart.cshtml" />
+    <Content Include="Views\CarSpecs\_ViewStart.cshtml" />
+    <Content Include="Views\Cars\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

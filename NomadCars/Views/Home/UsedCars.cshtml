@@ -3,6 +3,7 @@
 
 @{
     ViewBag.Title = "Used Cars";
+    int imageNo = 0;
 }
 <header class="jumbotron">
     <h1>Nomad Cars</h1>
@@ -17,6 +18,11 @@
             {
                 <img src=" https://via.placeholder.com/350x300" alt="Image of car" title="image of car" />
             }
+            else
+            {
+                var image = car.ImagesList.First();
+                <img class="main-car-image" src="@image.ImageURL" alt="@image.Description" title="@image.Caption" style="width:350px;" />
+            }
         </section>
         <section class="col-lg-6">
             <h2>@car.CarSpec.Make @car.CarSpec.Model.GetDisplayName()</h2>
@@ -25,10 +31,29 @@
                 @car.NumberPlate | @car.CarSpec.DriveTrain.GetDisplayName() | @car.Mileage miles
             </h4>
             <br /><br /><br />
-            <img src="https://via.placeholder.com/100x80" alt="front" title="image of car" />
-            <img src="https://via.placeholder.com/100x80" alt="left side" title="image of car" />
-            <img src="https://via.placeholder.com/100x80" alt="right side" title="image of car" />
-            <img src="https://via.placeholder.com/100x80" alt="back" title="image of car" />
+            @if (car.ImagesList.Count() == 0)
+            {
+                <img src="https://via.placeholder.com/100x80" alt="Image of car" title="image of car" />
+                <img src="https://via.placeholder.com/100x80" alt="front" title="image of car" />
+                <img src="https://via.placeholder.com/100x80" alt="left side" title="image of car" />
+                <img src="https://via.placeholder.com/100x80" alt="right side" title="image of car" />
+                <img src="https://via.placeholder.com/100x80" alt="back" title="image of car" />
+            }
+            else
+            {
+                imageNo = 0;
+                foreach (var image in car.ImagesList)
+                {
+                    imageNo++;
+                    if (imageNo > 1)
+                    {
+                        <a href="@image.ImageURL" target="_blank">
+                            <img class="small-car-image" src="@image.ImageURL" alt="@image.Description" title="@image.Caption" style="width:100px;" />
+                        </a>
+                    }
+                    
+                }
+            }
         </section>
         <section class="col-lg-2">
             <center>
